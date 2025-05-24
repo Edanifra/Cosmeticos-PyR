@@ -1,9 +1,9 @@
 <?php
 
-    include "../../conexion.php";
+include "../../conexion.php";
 
-    $var = @mysqli_query($conn,"SELECT color_principal FROM configuracion");
-    $data = mysqli_fetch_assoc($var);
+$var = @mysqli_query($conn, "SELECT color_principal FROM configuracion");
+$data = mysqli_fetch_assoc($var);
 
 ?>
 
@@ -19,9 +19,14 @@
         <ul class="nav top-menu">
     </div>
     <div class="top-menu">
-        <ul class="nav pull-right top-menu">
-            <li><a class="logout" href="../../salir.php"><i class="fa fa-sign-out" aria-hidden="true"
-                        style="font-size: 1.7em;"></i> Cerrar Sesión</a></li>
+        <ul class="nav pull-right top-menu" style="display:flex;gap:20px;align-items:baseline; color:white;">
+            <li>
+                <div id="fecha-hora"></div>
+            </li>
+            <li>
+                <a class="logout" href="../../salir.php"><i class="fa fa-sign-out" aria-hidden="true"
+                        style="font-size: 1.7em;"></i> Cerrar Sesión</a>
+            </li>
         </ul>
     </div>
 </header>
@@ -31,3 +36,20 @@
 
     </div>
 </div>
+
+<script>
+    function actualizarFechaHora() {
+        const ahora = new Date();
+        const opciones = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        const fecha = ahora.toLocaleDateString('es-ES', opciones);
+        const hora = ahora.toLocaleTimeString('es-ES');
+
+        document.getElementById('fecha-hora').innerHTML = `${fecha} - ${hora}`;
+    }
+
+    // Actualizar cada segundo
+    setInterval(actualizarFechaHora, 1000);
+
+    // Llamar la función por primera vez
+    actualizarFechaHora();
+</script>

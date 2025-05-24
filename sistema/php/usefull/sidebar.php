@@ -1,5 +1,26 @@
+<?php
+
+    include "../../conexion.php";
+
+    $var = @mysqli_query($conn,"SELECT color_principal, color_secundario, color_complementario FROM configuracion");
+    $data = mysqli_fetch_assoc($var);
+
+?>
+
+<style>
+    ul.sidebar-menu li a.active,
+    ul.sidebar-menu li a:hover,
+    ul.sidebar-menu li a:focus{
+        background: <?php echo $data['color_complementario']; ?>;
+    }
+
+    ul.sidebar-menu li ul.sub li{
+        background-color: <?php echo $data['color_principal']; ?>;
+    }
+</style>
+
 <aside>
-    <div id="sidebar"  class="nav-collapse ">
+    <div id="sidebar"  class="nav-collapse" style="background:<?php echo $data['color_secundario']; ?>;">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
         
