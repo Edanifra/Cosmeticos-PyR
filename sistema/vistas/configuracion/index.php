@@ -129,24 +129,30 @@
 
                     <div class="col-lg-12">
                         <div class="form-panel">
-                            <h4 class="mb"><i class="fa fa-angle-right"></i> Configuración panel de administración</h4>
+                            <h4 class="mb"><i class="fa fa-angle-right"></i> Colores de panel de administración</h4>
                             <form class="form-horizontal style-form form_conf_admin" onsubmit="event.preventDefault(); conf_admin();" action="" method="POST">
                                 <div class="form-group">
-                                    <label class="col-sm-2 col-sm-2 control-label">Color principal</label>
+                                    <label class="col-sm-2 col-sm-2 control-label">Color barra superior</label>
                                     <div class="col-sm-10">
                                         <input type="color" onchange="configAdmin();" id="color_principal" name="color_principal" value="<?php echo $data['color_principal']; ?>" class="form-control" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-sm-2 col-sm-2 control-label">Color secundario</label>
+                                    <label class="col-sm-2 col-sm-2 control-label">Color barra lateral</label>
                                     <div class="col-sm-10">
                                         <input type="color" onchange="configAdmin();" id="color_secundario" name="color_secundario" value="<?php echo $data['color_secundario']; ?>" class="form-control" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-sm-2 col-sm-2 control-label">Color complementario</label>
+                                    <label class="col-sm-2 col-sm-2 control-label">Color elementos de barra lateral</label>
                                     <div class="col-sm-10">
                                         <input type="color" onchange="configAdmin();" id="color_complementario" name="color_complementario" value="<?php echo $data['color_complementario']; ?>" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 col-sm-2 control-label">Color de fuente barra lateral</label>
+                                    <div class="col-sm-10">
+                                        <input type="color" onchange="configAdmin();" id="fuente_lateral" name="fuente_lateral" value="<?php echo $data['fuente_b_lateral']; ?>" class="form-control" required>
                                     </div>
                                 </div>
 
@@ -320,6 +326,7 @@
             var colorPrincipal = $('#color_principal').val();
             var colorSecundario = $('#color_secundario').val();
             var colorComplementario = $('#color_complementario').val();
+            var fuenteLateral = $('#fuente_lateral').val();
 
             $('#sidebar').css('background-color', colorSecundario);
             $('#header').css('background-color', colorPrincipal);

@@ -363,20 +363,6 @@ ul.sidebar-menu li a span {
     display: inline-block;
 }
 
-ul.sidebar-menu li a {
-    color: white;
-    text-decoration: none;
-    display: block;
-    padding: 15px 0 15px 10px;
-    font-size: 12px;
-    outline: none;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-}
-
 ul.sidebar-menu li a.active,
 ul.sidebar-menu li a:hover,
 ul.sidebar-menu li a:focus {

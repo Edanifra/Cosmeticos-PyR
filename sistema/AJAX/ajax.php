@@ -900,8 +900,13 @@ if ($_POST['action'] == 'actualizarConfigAdmin') {
     $principal = $_POST['principal'];
     $secundario = $_POST['secundario'];
     $complementario = $_POST['complementario'];
+    $lateral = $_POST['lateral'];
 
-    $query = @mysqli_query($conn,"UPDATE configuracion SET color_principal='$principal',color_secundario='$secundario',color_complementario='$complementario'");
+    $query = @mysqli_query($conn,
+    "UPDATE configuracion SET color_principal='$principal',
+                                     color_secundario='$secundario',
+                                     color_complementario='$complementario',
+                                     fuente_b_lateral='$lateral'");
 
     if ($query) {
         echo "exito";

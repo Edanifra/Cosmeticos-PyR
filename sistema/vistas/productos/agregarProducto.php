@@ -64,21 +64,24 @@ if (empty($_SESSION['admin']['activo'])) {
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">Nombre</label>
                                         <div class="col-sm-10">
-                                            <input type="text" name="nombre" class="form-control" required>
+                                            <input type="text" placeholder="Esmalte..." name="nombre"
+                                                class="form-control" required>
                                             <div class="asterisco">*</div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">Descripcion</label>
                                         <div class="col-sm-10">
-                                            <input type="text" name="descripcion" class="form-control" required>
+                                            <input type="text" placeholder="Esmalte para uñas..." name="descripcion"
+                                                class="form-control" required>
                                             <div class="asterisco">*</div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">Precio</label>
                                         <div class="col-sm-10">
-                                            <input type="number" name="precio" class="form-control" required>
+                                            <input type="number" placeholder="12,00" name="precio" class="form-control"
+                                                required>
                                             <div class="asterisco">*</div>
                                         </div>
                                     </div>
@@ -93,16 +96,16 @@ if (empty($_SESSION['admin']['activo'])) {
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">Stock mínimo</label>
                                         <div class="col-sm-10">
-                                            <input type="number" name="stock_min" id="stockMin" class="form-control"
-                                                required>
+                                            <input type="number" placeholder="15" name="stock_min" id="stockMin"
+                                                class="form-control" required>
                                             <div class="asterisco">*</div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">Stock máximo</label>
                                         <div class="col-sm-10">
-                                            <input type="number" name="stock_max" id="stockMax" class="form-control"
-                                                required>
+                                            <input type="number" placeholder="40" name="stock_max" id="stockMax"
+                                                class="form-control" required>
                                             <div class="asterisco">*</div>
                                         </div>
                                     </div>
@@ -135,7 +138,8 @@ if (empty($_SESSION['admin']['activo'])) {
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">Marca</label>
                                         <div class="col-sm-10">
-                                            <input type="text" name="marca" class="form-control" required>
+                                            <input type="text" placeholder="Valmy..." name="marca" class="form-control"
+                                                required>
                                             <div class="asterisco">*</div>
                                         </div>
                                     </div>
@@ -160,15 +164,16 @@ if (empty($_SESSION['admin']['activo'])) {
                                         <div class="asterisco">*</div>
                                     </div>
 
+                                    <div>Los campos obligatorios estan resaltados con un (<div
+                                            style="display:inline-block;" class="asterisco">*
+                                        </div>)
+                                    </div>
+
                                     <div class="form-group">
                                         <div class="col-sm-10"
                                             style="width:100%; display: flex; justify-content:center;">
                                             <input style="background: #7272df; color: white;" type="submit"
                                                 class="form-control" value="Agregar">
-                                        </div>
-
-                                        <div>Los campos obligatorios estan resaltados con un <div class="asterisco">*
-                                            </div>
                                         </div>
                                     </div>
 
